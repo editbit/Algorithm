@@ -68,6 +68,9 @@ int main() {
 		}
 
 	}
-
+	
+	delete[](x);
+	delete[](y);
+	
 	return 0;
 }
