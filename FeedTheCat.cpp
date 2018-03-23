@@ -3,6 +3,7 @@
 using namespace std;
 
 //A. Feed the cat(http://codeforces.com/contest/955/problem/A)
+//Wrong answer on test 8
 int main() {
 	int hh, mm, h, h2, d, c, n;
 	float a, a2;
