@@ -35,25 +35,25 @@ void MySort::merge(int *s, int l, int m, int h) {
 	delete[] u;
 }
 
-void MySort::mergesort(int *s, int l, int h) {
+void MySort::mergeSort(int *s, int l, int h) {
 	int m;
 
 	if (l < h) {
 		m = (h + l) / 2;
-		mergesort(s, l, m);
-		mergesort(s, m + 1, h);
+		mergeSort(s, l, m);
+		mergeSort(s, m + 1, h);
 		merge(s, l, m, h);
 	}
 }
 
 
-void MySort::quicksort(int *s, int l, int h) {
+void MySort::quickSort(int *s, int l, int h) {
 	int p = l;
 
 	if (l < h) {
 		p = partition(s, l, h);
-		quicksort(s, l, p-1);
-		quicksort(s, p+1, h);
+		quickSort(s, l, p-1);
+		quickSort(s, p+1, h);
 	}
 
 
@@ -70,6 +70,17 @@ int MySort::partition(int *s, int l, int h) {
 	swap(s[l], s[p]);
 
 	return p;
+}
 
 
+void MySort::bubbleSort(int *s, int n) {
+	int temp;
+
+	for (int i = 0; i < n-1; ++i) {
+		for (int j = 1; j < n-i-1; ++j) {
+			if (s[j] > s[j + 1]) {
+				swap(s[j], s[j+1]);
+			}
+		}
+	}
 }
