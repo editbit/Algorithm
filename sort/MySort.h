@@ -1,5 +1,6 @@
 #pragma once
 
+
 class MySort {
 	private:
 		static void swap(int &a, int&b);
